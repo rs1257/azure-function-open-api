@@ -1,5 +1,5 @@
 import { AzureFunction, Context } from "@azure/functions";
-import { mapOpenApi3_1 } from "@aaronpowell/azure-functions-nodejs-openapi";
+import { mapOpenApi3 } from "@aaronpowell/azure-functions-nodejs-openapi";
 
 const httpTrigger: AzureFunction = async (
   context: Context
@@ -10,7 +10,7 @@ const httpTrigger: AzureFunction = async (
   };
 };
 
-export default mapOpenApi3_1(httpTrigger, "/fn-http-trigger", {
+export default mapOpenApi3(httpTrigger, "/fn-http-trigger", {
   get: {
     responses: {
       "200": {
